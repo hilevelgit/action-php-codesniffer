@@ -1,0 +1,52 @@
+{
+  "name": "typescript-action",
+  "version": "0.0.0",
+  "private": true,
+  "description": "TypeScript template action",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
+    "lint": "eslint src/**/*.ts",
+    "pack": "ncc build",
+    "test": "jest --passWithNoTests",
+    "all": "npm run build && npm run format && npm run lint && npm run pack && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actions/typescript-action.git"
+  },
+  "keywords": [
+    "actions",
+    "node",
+    "setup"
+  ],
+  "author": "YourNameOrOrganization",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "1.2.4",
+    "@actions/github": "2.1.1",
+    "@octokit/webhooks": "7.4.0",
+    "git-blame-json": "1.0.1",
+    "php-codesniffer": "1.0.2",
+    "picomatch": "2.2.2"
+  },
+  "devDependencies": {
+    "@types/jest": "25.2.1",
+    "@types/node": "13.13.4",
+    "@types/picomatch": "2.2.1",
+    "@typescript-eslint/eslint-plugin": "2.30.0",
+    "@typescript-eslint/parser": "2.30.0",
+    "@zeit/ncc": "0.22.1",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-jest": "23.8.2",
+    "jest": "25.5.4",
+    "jest-circus": "25.5.4",
+    "js-yaml": "3.13.1",
+    "prettier": "2.0.5",
+    "ts-jest": "25.4.0",
+    "typescript": "3.8.3"
+  }
+}
